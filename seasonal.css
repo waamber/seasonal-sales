@@ -1,0 +1,13 @@
+body {
+	background-color: tomato;
+}
+
+#products-container {
+	border: 1px solid black;
+}
+
+.productsCard {
+	margin: 5px;
+	border: 1px solid black;
+	padding: 5px;
+}
