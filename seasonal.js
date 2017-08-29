@@ -37,7 +37,6 @@ function combineArrays(productsArray, categoriesArray){
 			}
 		});
 	});
-	console.log("products", productsArray);
 	domString(productsArray);
 }
 
@@ -59,7 +58,14 @@ function writeToDom(product){
 		productsContainer.innerHTML = product; 
 };
 
+function selectedSeason(){
+	var selection = document.getElementById("discounts").selectedIndex;
+		if(selection === product.season){
+			console.log(selection);
+		}
+};
 
+selectedSeason();
 
 
 
