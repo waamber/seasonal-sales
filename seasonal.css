@@ -2,12 +2,31 @@ body {
 	background-color: tomato;
 }
 
-#products-container {
-	border: 1px solid black;
+#select {
+	text-align: center;
 }
 
-.productsCard {
+#discounts {
+	font-size: 15px;
+	margin: 20px;
+	width: 200px;
+	height: 25px;
+}
+
+#products-container {
+	border: 1px solid black;
+	padding: 20px;
+	margin: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.productCard {
 	margin: 5px;
 	border: 1px solid black;
 	padding: 5px;
+	width: 200px;
+	height: 200px;
 }
