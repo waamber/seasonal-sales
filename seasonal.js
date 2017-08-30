@@ -1,3 +1,6 @@
+var seasonsDiscount = document.getElementById("discounts");
+var productsArray = [];
+
 function loadProducts(){
 	var productsData = JSON.parse(this.responseText).products; 
 	getCategories(productsData);
@@ -32,23 +35,31 @@ function combineArrays(productsArray, categoriesArray){
 		categoriesArray.forEach(function(categories){
 			if(currentCategoryId === categories.id){
 				product["department"] = categories.name;
-				product["finalPrice"] = product.price - categories.discount;
 				product["season"] = categories.season_discount;
+				product["discount"] = categories.discount;
+				product["discountedPrice"] = product.price - (product.price * categories.discount);
 			}
 		});
 	});
 	domString(productsArray);
+	console.log(productsArray);
 }
 
 function domString(products){
 	var productString = "";
 	for(var i = 0; i < products.length; i ++){
+		if(seasonsDiscount == products[i].category_id){
+			var finalPrice = products[i].discountedPrice;
+		}else {
+			var finalPrice = products[i].price;
+		}
 		productString += `<div class="productCard">
 												<h2>${products[i].name}</h2>
 												<h3>${products[i].department}</h3>
 												<div class= "productImg"><img src ="${products[i].url}"></div>
-												<h4>${products[i].finalPrice}</h4>
-									</div>`;
+												<h4>${finalPrice}</h4>
+											</div>`;
+		
 	}
 	writeToDom(productString);
 };
@@ -58,14 +69,9 @@ function writeToDom(product){
 		productsContainer.innerHTML = product; 
 };
 
-function selectedSeason(){
-	var selection = document.getElementById("discounts").selectedIndex;
-		if(selection === product.season){
-			console.log(selection);
-		}
-};
+seasonsDiscount.addEventListener("change", function(){
+	domString(productsArray);
+});
 
-selectedSeason();
-
-
+//when i take away .value, error goes away, but when choosing season, everything is gone.
 
