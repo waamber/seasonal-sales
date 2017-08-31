@@ -26,6 +26,7 @@ function getCategories(productsData){
 	function loadCategories(){
 		var categoriesData = JSON.parse(this.responseText).categories;
 		combineArrays(productsData, categoriesData);
+		productsArray = productsData;
 	}
 };
 
@@ -42,25 +43,26 @@ function combineArrays(productsArray, categoriesArray){
 		});
 	});
 	domString(productsArray);
-	console.log(productsArray);
 }
 
 function domString(products){
+	console.log(products);
 	var productString = "";
 	for(var i = 0; i < products.length; i ++){
-		if(seasonsDiscount == products[i].category_id){
-			var finalPrice = products[i].discountedPrice;
+		if(seasonsDiscount.value == products[i].category_id){
+			var finalPrice = products[i].discountedPrice.toFixed(2);
 		}else {
 			var finalPrice = products[i].price;
 		}
 		productString += `<div class="productCard">
 												<h2>${products[i].name}</h2>
 												<h3>${products[i].department}</h3>
-												<div class= "productImg"><img src ="${products[i].url}"></div>
-												<h4>${finalPrice}</h4>
+												<img src ="${products[i].url}">
+												<h4>$${finalPrice}</h4>
 											</div>`;
 		
 	}
+
 	writeToDom(productString);
 };
 
@@ -69,8 +71,9 @@ function writeToDom(product){
 		productsContainer.innerHTML = product; 
 };
 
-seasonsDiscount.addEventListener("change", function(){
+seasonsDiscount.addEventListener("change", function(event){
 	domString(productsArray);
+
 });
 
 //when i take away .value, error goes away, but when choosing season, everything is gone.
