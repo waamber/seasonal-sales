@@ -1,5 +1,19 @@
 body {
-	background-color: tomato;
+	background-image: url("https://images.template.net/wp-content/uploads/2015/11/24205655/Download-Brown-Background-Mulberry-Handmade-Paper.jpg");
+	background-repeat: repeat; 
+}
+
+
+h1 {
+	text-align: center;
+	font-size: 60px;
+	color: floralwhite;
+	text-shadow: 2px 2px black;
+}
+
+h4 {
+	text-align: center;
+	background-color: lemonchiffon;
 }
 
 #select {
@@ -14,7 +28,6 @@ body {
 }
 
 #products-container {
-	border: 1px solid black;
 	padding: 20px;
 	margin: 20px;
 	display: flex;
@@ -24,9 +37,36 @@ body {
 }
 
 .productCard {
+	background-color: floralwhite;
+	text-align: center;
 	margin: 5px;
 	border: 1px solid black;
+	border-radius: 5px;
 	padding: 5px;
 	width: 200px;
-	height: 200px;
+	height: 250px;
+}
+
+h2 {
+	margin-bottom: 5px;
+	font-size: 25px;
+}
+
+h3 {
+	margin-top: 2px;
+	margin-bottom: 4px;
+	font-size: 18px;
+}
+
+.productCard img {
+	margin: 0 auto;
+	border: 2px solid grey;
+	height: 100px;
+	width: 100px;
+}
+
+.productCard h4 {
+	margin: 0 auto;
+	margin-top: 20px;
+	font-size: 20px;
 }

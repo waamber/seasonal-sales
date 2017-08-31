@@ -4,61 +4,71 @@
       "id": 0,
       "name": "Kids socks",
       "price": 4.99,
-      "category_id": 1
+      "category_id": 1,
+      "url": "https://i.pinimg.com/736x/1b/af/e5/1bafe51fafd80226ed1a53f7f13e711c--kids-girls-toddler-girls.jpg"
     },
     {
       "id": 1,
       "name": "Mens socks",
       "price": 6.99,
-      "category_id": 1
+      "category_id": 1,
+      "url": "https://i.pinimg.com/736x/85/f1/d3/85f1d3fe69168985d652a95f32a8087a--fun-socks-mens-socks.jpg"
     },
     {
       "id": 2,
       "name": "Ladies socks",
       "price": 7.99,
-      "category_id": 1
+      "category_id": 1,
+      "url": "https://cdn.prezzybox.com/Images/36560.jpg"
     },
     {
       "id": 3,
       "name": "Foot stool",
       "price": 14.99,
-      "category_id": 2
+      "category_id": 2,
+      "url": "http://chairblog.eu/wp-content/uploads/2008/12/Friedberg-Hand-Foot-Stool.jpg"
     },
     {
       "id": 4,
       "name": "Lava lamp",
       "price": 9.99,
-      "category_id": 2
+      "category_id": 2,
+      "url": "https://i.ytimg.com/vi/3AtBTP0Hf4g/maxresdefault.jpg"
     },
     {
       "id": 5,
       "name": "3 drawer dresser",
       "price": 64.99,
-      "category_id": 2
+      "category_id": 2,
+      "url": "https://www.westelm.com/weimgs/ab/images/wcm/products/201711/0064/wood-tiled-3-drawer-dresser-c.jpg"
     },
     {
       "id": 6,
       "name": "Air filter",
       "price": 6.99,
-      "category_id": 3
+      "category_id": 3,
+      "url": "http://b.cdnbrm.com/images/products/large/air_filters/aem_dryflow_air_filters_hero.jpg"
     },
     {
       "id": 7,
       "name": "Surge protector",
       "price": 8.99,
-      "category_id": 3
+      "category_id": 3,
+      "url": "http://thewirecutter.com/wp-content/uploads/2016/03/01-surge-protectors-group.jpg"
     },
     {
       "id": 8,
       "name": "Plastic storage bin",
       "price": 3.99,
-      "category_id": 3
+      "category_id": 3,
+      "url": "https://images-na.ssl-images-amazon.com/images/I/81mUn0xLssL._SX355_.jpg"
     },
     {
       "id": 9,
       "name": "Light bulb",
       "price": 1.99,
-      "category_id": 3
+      "category_id": 3,
+      "url": "https://www.1000bulbs.com/images/categories/2000.jpg"
     }
   ]
 }
